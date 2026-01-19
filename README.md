@@ -24,9 +24,9 @@ A responsive webpage designed to demonstrate the implementation of **CSS Flexbox
 * **Hosting:** GitHub Pages.
 
 ## 📂 File Structure
-├── index.html       # Main HTML file (Structure)
-├── style.css        # External stylesheet (Flexbox styling)
-└── README.md        # Project documentation
+├── index.html       # Main HTML file (Structure)                                                                                                                                               
+├── style.css        # External stylesheet (Flexbox styling)                                                                                                                                    
+└── README.md        # Project documentation                                                                                                                                                    
 
 ## 📬 Contact
 
