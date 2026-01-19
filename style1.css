@@ -1,140 +1,170 @@
-/* --- Global Resets --- */
+/* --- 1. Global Reset --- */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    font-family: 'Inter', 'Segoe UI', sans-serif; /* Clean, modern font */
+    line-height: 1.7;
+    background-color: #0f172a; /* Dark Navy Background */
+    color: #cbd5e1; /* Light Grey Text for readability */
 }
 
-/* --- Header & Navigation --- */
+/* --- 2. Header: Flexbox Navbar --- */
 header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: #1e293b; /* Slightly lighter dark shade */
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #0d9488; /* Teal Accent Border */
     
-    /* Flex Container for Header Content */
-    display: flex; /* Enables Flexbox layout */
-    flex-direction: column; /* Stacks the Title, Tagline, and Nav vertically */
-    align-items: center; /* Centers items horizontally in the column */
-    gap: 10px; /* Adds space between the flex items */
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex; 
+    justify-content: space-between; /* Pushes Name to left, Nav to right */
+    align-items: center; /* Vertically centers content */
+    flex-wrap: wrap; /* Allows wrapping on very small screens */
+}
+
+header h1 {
+    color: #f1f5f9; /* White text */
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    display: none; /* Hidden in header for a cleaner look */
 }
 
 nav {
-    margin-top: 10px;
-    
-    /* Flex Container for Navigation Links */
-    display: flex; /* Turns the <nav> into a flex container */
-    justify-content: center; /* Packs the links in the center of the nav bar */
-    gap: 20px; /* Adds 20px space between each link */
-    flex-wrap: wrap; /* Allows links to drop to a new line on very small screens */
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    gap: 20px; /* Space between links */
 }
 
 nav a {
-    color: #ecf0f1;
+    color: #94a3b8;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #3498db;
+    color: #2dd4bf; /* Bright Teal on hover */
 }
 
-/* --- Main Layout --- */
+/* --- 3. Main Layout --- */
 main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
+    max-width: 1000px; /* Wider layout than before */
+    margin: 40px auto;
+    padding: 0 20px;
+    
+    /* FLEXBOX COLUMN LAYOUT for main content */
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Consistent space between sections */
 }
 
-section {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-h2 {
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-/* --- About Section (Profile Image + Text) --- */
+/* --- 4. About Section: Side-by-Side Flex Layout --- */
 .about-grid {
-    /* Flex Container for the About Section */
-    display: flex; /* Aligns the Image and the Text side-by-side */
-    align-items: center; /* Vertically centers the text with the image */
-    justify-content: center; /* Centers the content in the main container */
-    gap: 2rem; /* Adds space between the image and the text */
-    flex-wrap: wrap; /* CRITICAL: Moves image/text to new lines on mobile screens */
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    align-items: center; /* Vertically centers image and text */
+    gap: 3rem; /* Space between image and text */
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Makes the image a circle */
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    border: 4px solid #3498db;
+    border-radius: 12px; /* Rounded square instead of circle */
+    border: 2px solid #0d9488; /* Teal border */
+    
+    /* Prevent image from shrinking */
+    flex-shrink: 0; 
 }
 
-/* --- Skills Section --- */
+/* --- 5. Skills Section: Flex Wrapping --- */
+section {
+    /* Common styles for other sections */
+    background-color: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #f1f5f9;
+    border-left: 5px solid #0d9488; /* Left border accent */
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
 .skills-container {
-    /* Flex Container for Skill Tags */
-    display: flex; /* Lines up the skill tags in a row */
-    flex-wrap: wrap; /* Allows tags to flow to the next line if space runs out */
-    justify-content: flex-start; /* Aligns tags to the left (start) */
-    gap: 15px; /* Adds consistent spacing between tags */
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    flex-wrap: wrap; /* Critical: Wraps tags to next line */
+    gap: 12px;
 }
 
 .skill-tag {
-    background-color: #e0e0e0;
-    padding: 8px 15px;
-    border-radius: 20px;
+    background-color: #334155; /* Dark grey pill */
+    color: #2dd4bf; /* Teal text */
+    padding: 8px 16px;
+    border-radius: 6px;
     font-size: 0.9rem;
     font-weight: bold;
-    
-    /* Optional: Flex behavior for the item itself */
-    flex-grow: 0; /* Prevents the tag from stretching unnecessarily */
+    border: 1px solid #475569;
 }
 
-/* --- Footer & Contact --- */
+/* --- 6. Footer --- */
 footer {
     text-align: center;
-    padding: 2rem;
-    background-color: #2c3e50;
-    color: white;
+    padding: 3rem;
+    margin-top: auto;
+    border-top: 1px solid #334155;
 }
 
 .contact-list {
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     
-    /* Flex Container for Contact Links */
-    display: flex; /* Lines up Email, LinkedIn, Github horizontally */
-    justify-content: center; /* Centers the list in the footer */
-    gap: 30px; /* Separates the contact items */
-    flex-wrap: wrap; /* Ensures responsiveness on small screens */
+    /* FLEXBOX IMPLEMENTATION */
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    gap: 30px;
 }
 
 .contact-list a {
-    color: #3498db;
+    color: #f1f5f9;
     text-decoration: none;
-    font-size: 1.1rem;
+    border-bottom: 1px dotted #0d9488;
 }
 
-/* --- Responsive adjustments --- */
-/* Though Flexbox handles most of it, we can ensure the header text is larger on desktop */
-@media (min-width: 768px) {
+/* --- 7. RESPONSIVENESS (Mobile View) --- */
+@media (max-width: 768px) {
+    /* Stack Header Elements */
     header {
-        padding: 2rem 0;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Stack About Section (Image on top, text below) */
+    .about-grid {
+        flex-direction: column; /* Switches row to column */
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    /* Adjust padding for mobile */
+    main {
+        margin: 20px auto;
     }
 }
