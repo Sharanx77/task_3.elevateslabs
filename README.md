@@ -1,29 +1,38 @@
-# Task 3: Responsive Layout Using Flexbox
+# Responsive Layout (Task 3)
 
-[cite_start]This repository contains my submission for **Task 3** of the Elevate Labs Web Development Internship[cite: 2, 3]. The objective was to create a responsive web layout utilizing the CSS Flexbox model.
+A responsive webpage designed to demonstrate the implementation of **CSS Flexbox**. This project serves as a digital submission for the Elevate Labs Web Development Internship, focusing on flexible and mobile-friendly layouts.
 
-## 🔗 Live Demo
-[View Live Project](https://sharanx77.github.io/task_3.elevateslabs/)
 
-## 📂 Repository Link
-[GitHub Repository](https://github.com/Sharanx77/task_3.elevateslabs)
 
-## 📝 Task Requirements
-[cite_start]The goal of this task was to identify page sections (navigation, cards, lists) and align them using Flexbox properties[cite: 9].
+🔗 **Live Demo:** [View Live Project](https://sharanx77.github.io/task_3.elevateslabs/)
 
-### Key Features Implemented:
-* [cite_start]**Flex Containers:** Applied `display: flex` to parent containers to enable flexible layouts[cite: 10].
-* [cite_start]**Navigation Bar:** Created a horizontal navigation bar that adjusts automatically based on screen size[cite: 12].
-* [cite_start]**Card Layout:** Added multiple content cards aligned in rows using `justify-content` and `align-items`[cite: 11, 13].
-* [cite_start]**Responsiveness:** Used `flex-wrap` to ensure elements move to the next line on smaller screens (mobile-friendly alignment)[cite: 14, 18].
-* [cite_start]**Code Documentation:** Comments added to explain the role of specific flex properties[cite: 15].
+## 📖 Project Overview
 
-## 🛠️ Technologies Used
-* **HTML5**: Semantic structure.
-* **CSS3**: Flexbox (`flex-direction`, `flex-wrap`, `justify-content`, `align-items`).
-* [cite_start]**Tools**: VS Code, Browser DevTools[cite: 5].
+[cite_start]This project was developed as part of a web development internship task[cite: 2]. [cite_start]The focus was on utilizing **Flexbox** to create a layout that adapts seamlessly to different screen sizes, moving beyond rigid block structures to dynamic alignment[cite: 3, 17].
 
----
-**Elevate Labs Web Development Internship**Author: B Sharana Basava
-GitHub: @Sharanx77
-Email: b.sharanabasava2006@gmail.com
+### Key Features
+* [cite_start]**Flexible Containers:** Applied `display: flex` to parent containers to manage layout direction and alignment[cite: 10].
+* [cite_start]**Responsive Navigation:** A horizontal navigation bar that adjusts automatically based on the device width[cite: 12].
+* [cite_start]**Card Layout:** Multiple content cards aligned in rows using `justify-content` and `align-items` for precise spacing[cite: 11, 13].
+* [cite_start]**Mobile Adaptability:** Utilized `flex-wrap` to ensure content moves to the next line on smaller screens, preventing overflow[cite: 14, 18].
+
+## 🛠️ Tech Stack
+
+* **HTML5:** Semantic Structure.
+* [cite_start]**CSS3:** Flexbox (`flex-direction`, `flex-wrap`, `justify-content`)[cite: 11, 14].
+* [cite_start]**Tools:** VS Code, Browser DevTools[cite: 5].
+* **Hosting:** GitHub Pages.
+
+## 📂 File Structure
+├── index.html       # Main HTML file (Structure)
+├── style.css        # External stylesheet (Flexbox styling)
+└── README.md        # Project documentation
+
+## 📬 Contact
+
+**B Sharana Basava**
+*Electronics and Communication Engineering Student*
+
+* 📧 [Email](mailto:b.sharanabasava2006@gmail.com)
+* 💼 [LinkedIn](https://www.linkedin.com/in/b-sharana-basava-b4313a325)
+* 🐙 [GitHub](https://github.com/Sharanx77)
